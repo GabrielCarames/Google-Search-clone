@@ -1,0 +1,42 @@
+$background-dark-color: #202124;
+$background-light-dark-color: #303134;
+$button-dark-color: #303134;
+$border-dark-color: #303134;
+$text-white-color: #e8eaed;
+
+$arial: 'arial';
+$h1: 32px;
+$h2: 24px;
+$h3: 18px;
+$h4: 16px;
+$h5: 13px;
+$h6: 11px;
+$text: 16px;
+$little-text: 11px;
+
+// @mixin icons-div-styles {
+    
+// }
+
+html {
+    box-sizing: border-box;
+    &*, *::before, *::after {
+        box-sizing: inherit;
+    }
+    height: calc(100vh - calc(100vh - 100%));
+}
+
+body {
+    background-color: $background-dark-color;
+    font-family: $arial;
+    margin: 0;
+    overflow-x: hidden;
+    height: calc(100vh - calc(100vh - 100%));
+    width: 100%;
+    .app {
+        overflow-x: clip;
+        height: 100vh;
+    }
+}
+
+@import "./searcher";
