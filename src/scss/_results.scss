@@ -1,0 +1,77 @@
+.results-main {
+    width: 100%;
+    height: 100%;
+    .results-container {
+        .results-navbar {
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+            margin-left: 20px;
+            .navbar__logo-container {
+                width: 100px;
+                .navbar__logo{
+                    width: 90px;
+                    height: auto;
+                }
+            }
+            .navbar__input-container {
+                width: 100%;
+                margin-left: 50px;
+                .navbar__input-container-section {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    width: 690px;
+                    border-radius: 24px;
+                    z-index: 3;
+                    height: 44px;
+                    max-width: 690px;
+                    color: $text-white-color;
+                    box-sizing: border-box;
+                    background-color: $background-light-dark-color;
+                    .navbar__search-icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 10%;
+                        font-size: 14px;
+                        color: #9aa0a6;
+                        .fa-search {
+    
+                        }
+                    }
+                    .navbar__input {
+                        width: 85%;
+                        color: $text-white-color;
+                        background-color: $background-light-dark-color;
+                        border-radius: 24px;
+                        border: 1px solid #5f6368;
+                        border: none;
+                        padding-left: 0px;
+                        outline: none;
+                        font-size: 16px;
+                        height: 40px;
+                    }
+                }
+            }
+            .navbar__dark-mode-container {
+                width: 100px;
+                .navbar__dark-mode {
+
+                }
+            }
+        }
+        .results-results-container {
+            .results__organic_results-container {
+                .results__list {
+                    .list__item {
+
+                    }
+                }
+            }
+            .results__knowledge-container {
+                
+            }
+        }
+    }
+}

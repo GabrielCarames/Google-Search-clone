@@ -27,11 +27,6 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        .searcher__logo-container {
-            .searcher__logo {
-
-            }
-        }
         .searcher__input-container {
             display: flex;
             border: 1px solid #5f6368;
@@ -51,7 +46,7 @@
                     background-color: $background-light-dark-color;
                 }
             }
-            .searcher__search-logo {
+            .searcher__search-icon {
                 display: flex;
                 align-items: center;
                 justify-content: center;

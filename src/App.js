@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Results from "./components/Results";
 import Searcher from "./components/Searcher";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Searcher} />
+            <Route exact path="/results" component={Results} />
           </Switch>
         </BrowserRouter>
     </div>
