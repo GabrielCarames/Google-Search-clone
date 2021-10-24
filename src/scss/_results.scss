@@ -1,4 +1,5 @@
-$no-color: rgba(0, 0, 255, 0);
+$title-color: #8ab4f8;
+$snippet-color: #bdc1c6;
 
 .results-main {
     width: 100%;
@@ -68,7 +69,6 @@ $no-color: rgba(0, 0, 255, 0);
             height: 100%;
             display: flex;
             border-top: 1px solid red;
-            user-select: none;
             .results__organic_results-container {
                 display: flex;
                 width: 670px;
@@ -79,38 +79,51 @@ $no-color: rgba(0, 0, 255, 0);
                     padding-top: 40px;
                     .list__item {
                         list-style: none;
-                        color: $no-color;
+                        color: $text-white-color;
                         margin-top: 40px;
                         .list__url-container {
-                            background-color: $background-light-dark-color;
-                            width: auto;
-                            max-width: fit-content;
-                            border-radius: 30px;
+                            display: block;
+                            cursor: pointer;
+                            &:hover ~ .list__title {
+                                text-decoration: underline;
+                            }
                             .list__url {
-                                width: 100px;
                                 font-size: $h5;
+                                font-style: normal;
+                                color: #bdc1c6;
+                                line-height: 3;
+                                text-decoration: none;
                             }
                         }
-                        .list__title-container {
-                            background-color: $background-light-dark-color;
-                            height: 20px;
-                            padding: 0;
-                            margin: 0;
-                            margin-top: 20px;
-                            max-width: fit-content;
-                            border-radius: 30px;
-                            .list__title {
-                                padding: 0;
-                                margin: 0;
+                        .list__title {
+                            color: $title-color;
+                            font-size: 20px;
+                            line-height: 0;
+                            font-weight: normal;
+                            text-decoration: none;
+                            &:hover {
+                                text-decoration: underline;
                             }
                         }
-                        .list__snippet-container {
-                            background-color: $background-light-dark-color;
-                            margin-top: 10px;
-                            word-break: break-all;
-                            border-radius: 30px;
-                            .list__snippet {
-                                font-size: $h4;
+                        .list__snippet {
+                            font-size: 14px;
+                            color: $snippet-color;
+                            margin-top: 5px;
+                        }
+                        .list__sitelinks {
+                            list-style: none;;
+                            margin-left: -20px;
+                            .sitelinks__item {
+                                margin-top: 20px;
+                                .sitelinks__title {
+                                    color: $title-color;
+                                    font-size: $h3;
+                                    font-weight: normal;
+                                    text-decoration: none;
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
                             }
                         }
                     }

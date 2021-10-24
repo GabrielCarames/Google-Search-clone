@@ -3,6 +3,7 @@ $background-light-dark-color: #303134;
 $button-dark-color: #303134;
 $border-dark-color: #303134;
 $text-white-color: #e8eaed;
+$no-color: rgba(0, 0, 255, 0);
 
 $arial: 'arial';
 $h1: 32px;
@@ -41,3 +42,4 @@ body {
 
 @import "./searcher";
 @import "./results";
+@import "./skeletonresults";
