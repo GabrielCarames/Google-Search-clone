@@ -6,7 +6,7 @@ import DisplayResults from "./DisplayResults"
 
 const Results = () => {
 
-    const { handleChange, searchSubmit } = useSearcherHelper()
+    const { handleChange } = useSearcherHelper()
     const { loadingResults } = useContext(LoadingContext)
 
     return (

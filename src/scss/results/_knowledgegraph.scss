@@ -1,0 +1,81 @@
+.results__knowledge-container {
+    width: 400px;
+    height: min-content;
+    margin-left: 100px;
+    margin-top: 100px;
+    border: 1px solid #3c4043;
+    border-radius: 8px;
+    .knowledge__header {
+        .knowledge__images-container {
+            img:nth-of-type(1) {
+                border-radius: 8px 0 0 0;
+            }
+            img:nth-of-type(2) {
+                border-radius: 0 8px 0 0;
+            }
+            .knowledge__image {
+            }
+        }
+        .knowledge__title-container {
+            color: white;
+            margin: 10px;
+            .knowledge__title {
+                font-weight: normal;
+                font-size: 30px;
+                display: inline;
+            }
+            .knowledge__type {
+                line-height: 1.58;
+                font-weight: normal;
+
+                margin-top: 5px;
+                font-size: 14px;
+                color: #9aa0a6;
+            }
+        }
+    }
+    .knowledge__hr {
+        color: #3c4043;
+    }
+    .knowledge__data-container {
+        margin: 10px;
+        .knowledge__description-container {
+            .knowledge__description {
+                display: inline;
+                color: $snippet-color;
+                font-size: 14px;
+                line-height: 1.58;
+            }
+            .knowledge__source {
+                margin-left: 10px;
+                text-decoration: none;
+                color: $title-color;
+            }
+        }
+        .knowledge__known-attributes {
+            list-style: none;
+            padding: 0;
+            .list__item {
+                color: $snippet-color;
+                margin-bottom: 10px;
+                line-height: 1.58;
+                font-size: 14px;
+                .list__link {
+                    text-decoration: none;
+                    color: #bdc1c6;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                    .list__name {
+                        font-weight: bolder;
+                        display: inline;
+                    }
+                }
+                .list__value {
+                    display: inline;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}

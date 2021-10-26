@@ -9,8 +9,7 @@ export function useSearcherHelper () {
 
     const [ search, setSearch] = useState(null)
     let history = useHistory()
-    const url = 'https://google-search3.p.rapidapi.com/api/v1/search/'
-    const { loadingResults, setLoadingResults } = useContext(LoadingContext)
+    const { setLoadingResults } = useContext(LoadingContext)
     const dispatch = useDispatch()
 
 
