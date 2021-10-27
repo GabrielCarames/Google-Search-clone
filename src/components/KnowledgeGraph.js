@@ -5,13 +5,13 @@ const KnowledgeGraph = ({knowledgeGraph}) => {
         <div className="results__knowledge-container knowledge">
                 <header className="knowledge__header">
                     <div className="knowledge__images-container">
-                        {
+                        {/* {
                             knowledgeGraph && knowledgeGraph.images.map((image, i) => {
                                 return (
-                                    <img className="knowledge__image" src={image} alt="" key={i} />
-                                )
-                            })
-                        }
+                                    )
+                                })
+                            } */}
+                            <img className="knowledge__image" src={knowledgeGraph.images[0]} alt="" />
                     </div>
                     <div className="knowledge__title-container">
                         <h2 className="knowledge__title">{knowledgeGraph.title}</h2>
@@ -26,7 +26,7 @@ const KnowledgeGraph = ({knowledgeGraph}) => {
                     </div>
                     <ul className="knowledge__known-attributes list">
                         {
-                            knowledgeGraph && knowledgeGraph.known_attributes.map((attribute, i) => {
+                            knowledgeGraph && knowledgeGraph.known_attributes.slice(0, 5).map((attribute, i) => {
                                 return (
                                     <li className="list__item" key={i}>
                                         <a className="list__link" href={attribute.link}><p className="list__name">{attribute.name}</p></a>

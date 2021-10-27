@@ -1,15 +1,15 @@
-.results__organic_results-container {
+.ads-container {
     display: flex;
     width: 670px;
     margin-left: 180px;
     color: $text-white-color;
-    .results__list {
+    .ads__list {
         padding-left: 0;
-        margin-top: -10px;
+        // padding-top: 40px;
         .list__item {
             list-style: none;
             color: $text-white-color;
-            margin-top: 10px;
+            margin-top: 30px;
             .list__url-container {
                 display: block;
                 cursor: pointer;

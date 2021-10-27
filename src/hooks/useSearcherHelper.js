@@ -39,9 +39,9 @@ export function useSearcherHelper () {
         
         const params = {
             api_key: "5F6850F10FB74BA198C5CECD43E031F3",
-            q: toSearch,
-            gl: 'ar',
-            include_advertiser_info: true
+            q: "bitcoin",
+            "location": "New York,New York,United States",
+    "include_html": "true"
         }
         setLoadingResults(true)
         axios.get('https://api.scaleserp.com/search', { params })
