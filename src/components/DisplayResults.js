@@ -13,6 +13,7 @@ const DisplayResults = () => {
     console.log("reuslts", results, top_stories)
 
     return (
+        
         <div className="results-results-container">
             <div className="results__left-section">
                 <TopStories topStories={top_stories} />
