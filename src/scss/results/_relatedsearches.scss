@@ -1,0 +1,93 @@
+.related-searches-container {
+    margin-left: 180px;
+    color: #bdc1c6;
+    .realted-searches__header {
+        border-bottom: 1px solid #3c4043;
+        .related-searches__title {
+            font-size: 22px;
+            font-weight: normal;
+            color: #ddd;
+            line-height: 0;
+        }
+    }
+    .related-searches__body {
+        .related-searches__group-container {
+            .group__title {
+                font-weight: normal;
+            }
+            .group__list {
+                list-style: none;
+                display: flex;
+                padding: 0;
+                .list__item {
+                    margin-right: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    .list__image {
+                        width: 100px;
+                        height: 100px;
+                        background: red;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        &:hover ~ .list__query {
+                            text-decoration: underline;
+                        }
+                    }
+                    .list__query {
+                        color: #bdc1c6;
+                        text-decoration: none;
+                        margin-top: 10px;
+                        margin-left: 10px;
+                        font-size: 14px;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        .related-searches__group-standard {
+            border-top: 1px solid #3c4043;
+            margin-top: 40px;
+            .standard__list {
+                list-style: none;
+                padding: 0;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                gap: 10px;
+                margin-top: 40px;
+                .list__item-container {
+                    text-decoration: none;
+                    .list__item {
+                        display: flex;
+                        align-items: center;
+                        border-radius: 100px;
+                        height: 48px;
+                        max-height: 48px;
+                        background-color: #303134;
+                        cursor: pointer;
+                        &:hover {
+                            .list__link {
+                                text-decoration: underline;
+                            }
+                        }
+                        .fa-search {
+                            margin-left: 20px;
+                            color: #bdc1c6;
+                            font-size: 14px;
+                            text-decoration: none;
+                        }
+                        .list__link {
+                            margin-left: 20px;
+                            text-decoration: none;
+                            color: #bdc1c6;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
