@@ -1,0 +1,81 @@
+.related-questions-container {
+    margin-left: 180px;
+    margin-top: 40px;
+    margin-bottom: -20px;
+    .related-questions__title {
+        color: #dddee1;
+        font-weight: normal;
+        font-size: 22px;
+    }
+    .related-questions__list {
+        margin: 0;
+        padding: 0;
+        .list__item {
+            color: #bdc1c6;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid #3c4043;
+            border-bottom: 1px solid #3c4043;
+            cursor: pointer;
+            width: 670px;
+            .list__accordion-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .header__title {
+                    line-height: 0;
+                    font-weight: normal;
+                }
+                .fa-chevron-down {
+                    
+                }
+            }
+            .list__accordion-body {
+                display: none;
+                max-height: 0;
+                &.active {
+                    max-height: 290px;
+                    display: inline;
+                }
+                .body__text {
+                    cursor:text;
+                    margin: 0;
+                    line-height: 24px;
+                }
+                .body__link-container {
+                    display: flex;
+                    margin-top: 20px;
+                    &:hover ~ .body__title {
+                        text-decoration: underline;
+                    }
+                    .body__link {
+                        text-decoration: none;
+                        color: #bdc1c6;
+                    }
+                }
+                .body__title {
+                    color: #8ab4f8;
+                    text-decoration: none;
+                    font-size: 20px;
+                    line-height: 2;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                .body__search-for-title {
+                    display: flex;
+                    align-items: center;
+                    color: #bdc1c6;
+                    cursor: default;
+                    margin-top: 30px;
+                    .body__search-for {
+                        text-decoration: none;
+                        color: #8ab4f8;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
