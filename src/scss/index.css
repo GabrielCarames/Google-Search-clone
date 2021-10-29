@@ -918,6 +918,7 @@ body .app {
 
 .related-searches-container {
   margin-left: 180px;
+  margin-top: 60px;
   color: #bdc1c6;
 }
 
@@ -1178,5 +1179,84 @@ body .app {
 
 .pagination-container .pagination__letters .letter__last-three .last__letter-next:hover {
   text-decoration: underline;
+}
+
+.inline-tweets-container {
+  width: 670px;
+  margin-left: 180px;
+  margin-top: 0px;
+}
+
+.inline-tweets-container .inline-tweets__title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #8ab4f8;
+}
+
+.inline-tweets-container .inline-tweets__title-container .inline-tweets__title {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: .5;
+}
+
+.inline-tweets-container .inline-tweets__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.inline-tweets-container .inline-tweets__list .list__item {
+  width: 210px;
+  list-style: none;
+  border: 1px solid #3c4043;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+}
+
+.inline-tweets-container .inline-tweets__list .list__item .list__img {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.inline-tweets-container .inline-tweets__list .list__item .list__source {
+  text-decoration: none;
+  color: #bdc1c6;
+  padding: 15px;
+  display: block;
+  font-size: 12px;
+}
+
+.inline-tweets-container .inline-tweets__list .list__item .list__snippet {
+  color: #bdc1c6;
+  padding: 0 0 40px 15px;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 20px;
+  word-wrap: break-word;
+}
+
+.inline-tweets-container .inline-tweets__list .list__item .list__date {
+  text-decoration: none;
+  color: #9aa0a6;
+  display: inline-block;
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  font-size: 12px;
 }
 /*# sourceMappingURL=index.css.map */
