@@ -32,10 +32,10 @@ const RelatedSearches = ({relatedSearches}) => {
                         {
                             relatedSearchesStandard && relatedSearchesStandard.map((search, id) => {
                                 return (
-                                    <a className="list__item-container" href={search.link}>
-                                        <li className="list__item" key={id}>
+                                    <a className="list__item-container" href={search.link} key={id}>
+                                        <li className="list__item">
                                             <i className="fas fa-search"></i>
-                                            <a className="list__link" href={search.link}>{search.query}</a>
+                                            <p className="list__link">{search.query}</p>
                                         </li>
                                     </a>
                                 )

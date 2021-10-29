@@ -7,6 +7,7 @@ $no-color: rgba(0, 0, 255, 0);
 $snippet-color: #bdc1c6;
 
 $arial: 'arial';
+$KumbhSans: 'Kumbh Sans', sans-serif;
 $h1: 32px;
 $h2: 24px;
 $h3: 18px;
@@ -28,9 +29,9 @@ html {
     height: calc(100vh - calc(100vh - 100%));
 }
 
-body {
+body { 
     background-color: $background-dark-color;
-    font-family: $arial;
+    font-family: $arial, $KumbhSans;
     margin: 0;
     overflow-x: hidden;
     height: calc(100vh - calc(100vh - 100%));

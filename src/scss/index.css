@@ -11,7 +11,7 @@ html*, html *::before, html *::after {
 
 body {
   background-color: #202124;
-  font-family: "arial";
+  font-family: "arial", "Kumbh Sans", sans-serif;
   margin: 0;
   overflow-x: hidden;
   height: calc(100vh - calc(100vh - 100%));
@@ -1031,6 +1031,152 @@ body .app {
 }
 
 .related-searches-container .related-searches__body .related-searches__group-standard .standard__list .list__item-container .list__item .list__link:hover {
+  text-decoration: underline;
+}
+
+.pagination-container {
+  color: white;
+  margin-left: 180px;
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination-container .pagination__letters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 308px;
+  height: 57px;
+}
+
+.pagination-container .pagination__letters .letter__G {
+  height: 57px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 35px;
+  line-height: 0;
+}
+
+.pagination-container .pagination__letters .letter__o-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0;
+  height: 57px;
+}
+
+.pagination-container .pagination__letters .letter__o-list .letter__o-item {
+  height: 57px;
+}
+
+.pagination-container .pagination__letters .letter__o-list .letter__o-item .letter__o-container {
+  text-decoration: none;
+  height: 57px;
+}
+
+.pagination-container .pagination__letters .letter__o-list .letter__o-item .letter__o-container .letter__o {
+  color: white;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 35px;
+  line-height: 0;
+  height: 40px;
+  margin: 0;
+}
+
+.pagination-container .pagination__letters .letter__o-list .letter__o-item .letter__o-container .letter__o:hover ~ .letter__o-page-number {
+  text-decoration: underline;
+}
+
+.pagination-container .pagination__letters .letter__o-list .letter__o-item .letter__o-container .letter__o-page-number {
+  color: #8ab4f8;
+  margin: 0;
+  line-height: 0;
+  height: 17px;
+  font-size: 14px;
+  margin-top: -8px;
+}
+
+.pagination-container .pagination__letters .letter__last-three {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 57px;
+}
+
+.pagination-container .pagination__letters .letter__last-three .last__letters-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  text-align: start;
+  color: white;
+  text-decoration: none;
+}
+
+.pagination-container .pagination__letters .letter__last-three .last__letters-header:hover ~ .last__letter-next {
+  text-decoration: underline;
+}
+
+.pagination-container .pagination__letters .letter__last-three .last__letters-header .last__g-letter {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 35px;
+  line-height: 0;
+  height: 40px;
+  margin: 0;
+}
+
+.pagination-container .pagination__letters .letter__last-three .last__letters-header .last__l-letter {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 35px;
+  line-height: 0;
+  height: 40px;
+  margin: 0;
+}
+
+.pagination-container .pagination__letters .letter__last-three .last__letters-header .last__e-letter {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 35px;
+  line-height: 0;
+  height: 40px;
+  margin: 0;
+  padding-left: 38px;
+  padding-top: 8px;
+  position: absolute;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.pagination-container .pagination__letters .letter__last-three .last__letters-header .fa-chevron-right {
+  color: #8ab4f8;
+  height: 40px;
+  margin-left: 40px;
+}
+
+.pagination-container .pagination__letters .letter__last-three .last__letter-next {
+  height: 17px;
+  font-size: 14px;
+  line-height: 0;
+  color: #8ab4f8;
+  text-align: right;
+  text-decoration: none;
+}
+
+.pagination-container .pagination__letters .letter__last-three .last__letter-next:hover {
   text-decoration: underline;
 }
 /*# sourceMappingURL=index.css.map */

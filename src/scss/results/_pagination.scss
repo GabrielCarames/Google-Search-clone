@@ -1,0 +1,104 @@
+@mixin letter {
+    font-family: $KumbhSans;
+    font-size: 35px;
+    line-height: 0;
+}
+
+.pagination-container {
+    color: white;
+    margin-left: 180px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    .pagination__letters {
+        display: flex;
+        align-items: center;
+        width: 308px;
+        height: 57px;
+        .letter__G {
+            height: 57px;
+            @include letter;
+        }
+        .letter__o-list {
+            list-style: none;
+            display: flex;
+            align-items:flex-start;
+            padding: 0;
+            height: 57px;
+            .letter__o-item {
+                height: 57px;
+                .letter__o-container {
+                    text-decoration: none;
+                    height: 57px;
+                    .letter__o {
+                        color: white;
+                        @include letter;
+                        height: 40px;
+                        margin: 0;
+                        &:hover ~ .letter__o-page-number {
+                            text-decoration: underline;
+                        }
+                    }
+                    .letter__o-page-number {
+                        color: #8ab4f8;
+                        margin: 0;
+                        line-height: 0;
+                        height: 17px;
+                        font-size: 14px;
+                        margin-top: -8px;
+                    }
+                }
+            }
+        }
+        .letter__last-three {
+            display: flex;
+            flex-direction: column;
+            height: 57px;
+            .last__letters-header {
+                display: flex;
+                height: 40px;
+                text-align: start;
+                color: white;
+                text-decoration: none;
+                &:hover ~ .last__letter-next {
+                    text-decoration: underline;
+                }
+                .last__g-letter {
+                    @include letter;
+                    height: 40px;
+                    margin: 0;
+                }
+                .last__l-letter {
+                    @include letter;
+                    height: 40px;
+                    margin: 0;
+                }
+                .last__e-letter {
+                    @include letter;
+                    height: 40px;
+                    margin: 0;
+                    padding-left: 38px;
+                    padding-top: 8px;
+                    position: absolute;
+                    transform: rotate(-30deg);
+                }
+                .fa-chevron-right {
+                    color: #8ab4f8;
+                    height: 40px;
+                    margin-left: 40px;
+                }
+            }
+            .last__letter-next {
+                height: 17px;
+                font-size: 14px;
+                line-height: 0;
+                color: #8ab4f8;
+                text-align: right;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
