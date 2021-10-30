@@ -7,7 +7,7 @@ const TopStories = ({topStories}) => {
                 <h3 className="top-histories__title">Top stories</h3>
             </div>
             <ul className="top-histories__list list">
-                {topStories && topStories.map((story, id) => {
+                {topStories.map((story, id) => {
                     return (
                         <li className="list__item" key={id}>
                             <a href={story.link}><img className="list__img" src={story.thumbnail} alt="" /></a>

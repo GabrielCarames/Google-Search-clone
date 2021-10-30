@@ -25,23 +25,22 @@ export function useSearcherHelper () {
         history.push("/results")
 
         // set up the request parameters
-        const locationParams = {
-            api_key: "5F6850F10FB74BA198C5CECD43E031F3",
-            q: "london"
-        }
+        // const locationParams = {
+        //     api_key: "5F6850F10FB74BA198C5CECD43E031F3",
+        //     q: "london"
+        // }
         
-        axios.get('https://api.scaleserp.com/locations', { locationParams })
-        .then(response => {
-            console.log(JSON.stringify(response.data, 0, 2));
-        }).catch(error => {
-            console.log(error);
-        })
+        // axios.get('https://api.scaleserp.com/locations', { locationParams })
+        // .then(response => {
+        //     console.log(JSON.stringify(response.data, 0, 2));
+        // }).catch(error => {
+        //     console.log(error);
+        // })
         
         const params = {
             api_key: "5F6850F10FB74BA198C5CECD43E031F3",
-            q: "bitcoin",
+            q: toSearch,
             "location": "New York,New York,United States",
-    "include_html": "true"
         }
         setLoadingResults(true)
         axios.get('https://api.scaleserp.com/search', { params })

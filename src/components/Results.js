@@ -10,7 +10,8 @@ const Results = () => {
     const { handleChange } = useSearcherHelper()
     const { loadingResults } = useContext(LoadingContext)
     const results = useSelector(state => state.resultsReducer)
-    const { search_information, search_parameters } = results
+    // const { search_information, search_parameters } = results
+    // console.log("results", results)
 
     return (
         <main className="results-main">
@@ -27,7 +28,7 @@ const Results = () => {
                                 <div className="navbar__search-icon">
                                     <i className="fas fa-search"></i>
                                 </div>
-                                <input className="navbar__input" name="search" type="text" value={search_parameters.q} onChange={handleChange}>
+                                <input className="navbar__input" name="search" type="text" value={results && results.search_parameters && results.search_parameters.q} onChange={handleChange}>
 
                                 </input>
                             </div>
@@ -60,7 +61,7 @@ const Results = () => {
                     </div>
                     <hr className="results-navbar__divider"/>
                     <h3 className="results-navbar__search-metadata">
-                        About {search_information.total_results.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} results ({search_information.time_taken_displayed} seconds)
+                        About {results && results.search_information && results.search_information.total_results.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} results ({results && results.search_information && results.search_information.time_taken_displayed} seconds)
                     </h3>
                 </div>
                 {loadingResults ? <SkeletonResults/> : <DisplayResults />}

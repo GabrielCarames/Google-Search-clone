@@ -7,7 +7,7 @@ const InlineTweets = ({inlineTweets}) => {
                 <h3 className="inline-tweets__title">{inlineTweets[0].title} · Twitter</h3>
             </div>
             <ul className="inline-tweets__list list">
-                {inlineTweets && inlineTweets.map((tweet, id) => {
+                {inlineTweets.map((tweet, id) => {
                     return (
                         <li className="list__item" key={id}>
                             <a href={tweet.link}><img className="list__img" src={tweet.thumbnail} alt="" /></a>

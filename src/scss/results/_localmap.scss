@@ -1,0 +1,20 @@
+.local-map-container {
+    height: 200px;
+    width: 670px;
+    margin-left: 180px;
+    margin-bottom: 100px;
+    .local-map {
+        .map__image-title {
+            color: #dedede;
+            font-weight: normal;
+        }
+        .map__image-container {
+            border-radius: 8px;
+            .map__image {
+                height: 200px;
+                width: 670px;
+                border-radius: 8px;
+            }
+        }
+    }
+}
