@@ -22,10 +22,15 @@ const OrganicResults = ({organicResults}) => {
                 {organicResults && organicResults.map((result) => {
                     return (
                         <li className="list__item" key={result.position}>
-                            <cite className="list__url-container"><a className="list__url" href={result.link}>{result.link}</a></cite>
-                            <a href={result.link} className="list__title">{result.title}</a>
-                            <p className="list__snippet" >{result.snippet}</p>
-                            {result.sitelinks ? result.sitelinks ? displaySiteLinks(result.sitelinks.inline) : displaySiteLinks(result.sitelinks.expanded) : ''} 
+                            <div className="list__left-section">
+                                <cite className="list__url-container"><a className="list__url" href={result.link}>{result.displayed_link}</a></cite>
+                                <a href={result.link} className="list__title">{result.title}</a>
+                                <p className="list__snippet" >{result.date && <b className="list__date">{result.date} —</b>}{result.snippet}</p>
+                                {result.sitelinks ? result.sitelinks ? displaySiteLinks(result.sitelinks.inline) : displaySiteLinks(result.sitelinks.expanded) : ''} 
+                            </div>
+                            {result.thumbnail && <div className="list__right-section">
+                                <img className="list__image" src={result.thumbnail_image} alt="" />
+                            </div>}
                         </li>
                     )
                 })}

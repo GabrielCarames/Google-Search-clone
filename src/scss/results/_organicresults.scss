@@ -7,52 +7,73 @@
         padding-left: 0;
         margin-top: -10px;
         .list__item {
+            display: flex;
             list-style: none;
             color: $text-white-color;
             margin-top: 10px;
-            .list__url-container {
-                display: block;
-                cursor: pointer;
-                &:hover ~ .list__title {
-                    text-decoration: underline;
-                }
-                .list__url {
-                    font-size: $h5;
-                    font-style: normal;
-                    color: #bdc1c6;
-                    line-height: 3;
-                    text-decoration: none;
-                }
-            }
-            .list__title {
-                color: $title-color;
-                font-size: 20px;
-                line-height: 0;
-                font-weight: normal;
-                text-decoration: none;
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-            .list__snippet {
-                font-size: 14px;
-                color: $snippet-color;
-                margin-top: 5px;
-            }
-            .list__sitelinks {
-                list-style: none;;
-                margin-left: -20px;
-                .sitelinks__item {
-                    margin-top: 20px;
-                    .sitelinks__title {
-                        color: $title-color;
-                        font-size: $h3;
-                        font-weight: normal;
+            .list__left-section {
+
+                .list__url-container {
+                    display: block;
+                    cursor: pointer;
+                    &:hover ~ .list__title {
+                        text-decoration: underline;
+                    }
+                    .list__url {
+                        font-size: 14px;
+                        font-style: normal;
+                        color: #bdc1c6;
+                        line-height: 3;
                         text-decoration: none;
-                        &:hover {
-                            text-decoration: underline;
+                    }
+                }
+                .list__title {
+                    color: $title-color;
+                    font-size: 20px;
+                    line-height: 0;
+                    font-weight: normal;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                .list__date {
+                    font-weight: normal;
+                    display: inline;
+                    margin-right: 10px;
+                    color: #9aa0a6;
+                }
+                .list__snippet {
+                    font-size: 14px;
+                    color: $snippet-color;
+                    margin-top: 5px;
+                }
+                .list__sitelinks {
+                    list-style: none;;
+                    margin-left: -20px;
+                    .sitelinks__item {
+                        margin-top: 20px;
+                        .sitelinks__title {
+                            color: $title-color;
+                            font-size: $h3;
+                            font-weight: normal;
+                            text-decoration: none;
+                            &:hover {
+                                text-decoration: underline;
+                            }
                         }
                     }
+                }
+            }
+            .list__right-section {
+                width: 92px;
+                height: 92px;
+                margin-left: 20px;
+                .list__image {
+                    width: 92px;
+                    height: 92px;
+                    object-fit: cover;
+                    border-radius: 8px;
                 }
             }
         }

@@ -13,6 +13,8 @@
     }
     .related-searches__body {
         .related-searches__group-container {
+            border-bottom: 1px solid #3c4043;
+            margin-bottom: 40px;
             .group__title {
                 font-weight: normal;
             }
@@ -48,8 +50,6 @@
             }
         }
         .related-searches__group-standard {
-            border-top: 1px solid #3c4043;
-            margin-top: 40px;
             .standard__list {
                 list-style: none;
                 padding: 0;
