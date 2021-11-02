@@ -14,6 +14,7 @@ Google-Search-clone
 <div align="center">
 
 [![React](https://img.shields.io/badge/-React-blue?style=for-the-badge&logo=React)](https://es.reactjs.org/)
+[![Redux](https://img.shields.io/badge/-Redux-violet?style=for-the-badge&logo=redux)](https://sass-lang.com/)
 [![SASS](https://img.shields.io/badge/-sass-yellow?style=for-the-badge&logo=sass)](https://sass-lang.com/)
 
 </div>
