@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Results from "./components/Results";
-import Searcher from "./components/Searcher";
+import { connect } from 'react-redux'
 import { useState } from "react";
 import LoadingContext from "./contexts/LoadingContext";
-import { connect } from 'react-redux'
+import Searcher from "./components/Searcher";
+import Results from "./components/Results";
 
 const mapStateToProps = (state) => {
   return {

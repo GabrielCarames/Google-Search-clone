@@ -1,6 +1,5 @@
 const LocalMap = ({localMap}) => {
 
-
     return (
         <div className="local-map-container" id='local-map-container'>
             <div className="local-map map">

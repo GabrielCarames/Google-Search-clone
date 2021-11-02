@@ -8,10 +8,32 @@ const SkeletonResults = () => {
                 <ul className="results__list list">
                     <li className="list__item">
                         <div className="list__url-container">
-                            <p className="list__url">https://www.hola.com.ar</p>
+                            <p className="list__url">Lorem ipsum dolor sit</p>
                         </div>
                         <div className="list__title-container">
-                            <h3 className="list__title">COMPRA GAMER esta bueno comprame gamer</h3>
+                            <h3 className="list__title">Lorem ipsum dolor sit amet, consectetur</h3>
+                        </div>
+                        <div className="list__snippet-container">
+                            <p className="list__snippet" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aliquam, dolores impedit velit exercitationem assumenda? Eaque, temporibus facilis nam asd</p>
+                        </div>
+                    </li>
+                    <li className="list__item">
+                        <div className="list__url-container">
+                            <p className="list__url">Lorem ipsum dolor sit</p>
+                        </div>
+                        <div className="list__title-container">
+                            <h3 className="list__title">Lorem ipsum dolor sit amet, consectetur</h3>
+                        </div>
+                        <div className="list__snippet-container">
+                            <p className="list__snippet" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aliquam, dolores impedit velit exercitationem assumenda? Eaque, temporibus facilis nam asd</p>
+                        </div>
+                    </li>
+                    <li className="list__item">
+                        <div className="list__url-container">
+                            <p className="list__url">Lorem ipsum dolor sit</p>
+                        </div>
+                        <div className="list__title-container">
+                            <h3 className="list__title">Lorem ipsum dolor sit amet, consectetur</h3>
                         </div>
                         <div className="list__snippet-container">
                             <p className="list__snippet" >Últimas Noticias de Revista ¡HOLA!: Floppy Tesouro abre las puertas de su nuevo departamento con unas vistas impresionantes, ¿Quién es Pauline Ducret, ...</p>
@@ -19,46 +41,24 @@ const SkeletonResults = () => {
                     </li>
                     <li className="list__item">
                         <div className="list__url-container">
-                            <p className="list__url">https://www.hola.com.ar</p>
+                            <p className="list__url">Lorem ipsum dolor sit</p>
                         </div>
                         <div className="list__title-container">
-                            <h3 className="list__title">COMPRA GAMER esta bueno comprame gamer</h3>
+                            <h3 className="list__title">Lorem ipsum dolor sit amet, consectetur</h3>
                         </div>
                         <div className="list__snippet-container">
-                            <p className="list__snippet" >Últimas Noticias de Revista ¡HOLA!: Floppy Tesouro abre las puertas de su nuevo departamento con unas vistas impresionantes, ¿Quién es Pauline Ducret, ...</p>
+                            <p className="list__snippet" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aliquam, dolores impedit velit exercitationem assumenda? Eaque, temporibus facilis nam asd</p>
                         </div>
                     </li>
                     <li className="list__item">
                         <div className="list__url-container">
-                            <p className="list__url">https://www.hola.com.ar</p>
+                            <p className="list__url">Lorem ipsum dolor sit</p>
                         </div>
                         <div className="list__title-container">
-                            <h3 className="list__title">COMPRA GAMER esta bueno comprame gamer</h3>
+                            <h3 className="list__title">Lorem ipsum dolor sit amet, consectetur</h3>
                         </div>
                         <div className="list__snippet-container">
-                            <p className="list__snippet" >Últimas Noticias de Revista ¡HOLA!: Floppy Tesouro abre las puertas de su nuevo departamento con unas vistas impresionantes, ¿Quién es Pauline Ducret, ...</p>
-                        </div>
-                    </li>
-                    <li className="list__item">
-                        <div className="list__url-container">
-                            <p className="list__url">https://www.hola.com.ar</p>
-                        </div>
-                        <div className="list__title-container">
-                            <h3 className="list__title">COMPRA GAMER esta bueno comprame gamer</h3>
-                        </div>
-                        <div className="list__snippet-container">
-                            <p className="list__snippet" >Últimas Noticias de Revista ¡HOLA!: Floppy Tesouro abre las puertas de su nuevo departamento con unas vistas impresionantes, ¿Quién es Pauline Ducret, ...</p>
-                        </div>
-                    </li>
-                    <li className="list__item">
-                        <div className="list__url-container">
-                            <p className="list__url">https://www.hola.com.ar</p>
-                        </div>
-                        <div className="list__title-container">
-                            <h3 className="list__title">COMPRA GAMER esta bueno comprame gamer</h3>
-                        </div>
-                        <div className="list__snippet-container">
-                            <p className="list__snippet" >Últimas Noticias de Revista ¡HOLA!: Floppy Tesouro abre las puertas de su nuevo departamento con unas vistas impresionantes, ¿Quién es Pauline Ducret, ...</p>
+                            <p className="list__snippet" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aliquam, dolores impedit velit exercitationem assumenda? Eaque, temporibus facilis nam asd</p>
                         </div>
                     </li>
                 </ul>

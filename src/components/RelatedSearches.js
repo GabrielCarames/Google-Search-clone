@@ -4,7 +4,6 @@ const RelatedSearches = ({relatedSearches}) => {
     const relatedSearchesGroup = relatedSearches.filter((search) => search.type === "group")
     const relatedSearchesStandard = relatedSearches.filter((search) => search.type === "standard")
 
-
     return (
         <div className="related-searches-container">
             <header className="realted-searches__header">
@@ -20,7 +19,6 @@ const RelatedSearches = ({relatedSearches}) => {
                                 relatedSearchesGroup && relatedSearchesGroup.map((search, id) => {
                                     return (
                                         <li className="list__item" key={id}>
-                                            {/* <img className="list__image" src={search} alt="related-search" /> */}
                                             <div className="list__image"></div>
                                             <a className="list__query" href={search.link}>{search.query}</a>
                                         </li>

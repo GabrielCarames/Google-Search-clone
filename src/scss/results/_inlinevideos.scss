@@ -5,9 +5,6 @@
         display: flex;
         align-items: center;
         color: #e8eaed;
-        .fa-youtube {
-    
-        }
         .inline-videos__title {
             color: #e8eaed;
             font-weight: normal;
@@ -67,10 +64,6 @@
         border: 1px solid #3c4043;
         border-right: 0;
         border-left: 0;
-        .inline-videos__title-container {
-            .inline-videos__title {
-            }
-        }
         .inline-videos__list {
             .list__item-container {
                 .list__item {
@@ -85,8 +78,6 @@
                         }
                         .list__source {
                             line-height: normal;
-                        }
-                        .list__date {
                         }
                     }
                 }

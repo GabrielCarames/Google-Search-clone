@@ -32,12 +32,7 @@ const LocalResults = ({localResults}) => {
                                                 })
                                             }
                                         </ul>
-                                        {/* <h5 className="list__title">{result.title}</h5>
-                                        <p className="list__rating">{result.rating}</p>
-                                        <p className="list__ubication">{result.extensions[4]}</p>
-                                        <p className="list__description">{result.extensions[6]}</p> */}
                                     </div>
-
                                 </div>
                                 <div className="list__right-section">
                                     {result.image ? 

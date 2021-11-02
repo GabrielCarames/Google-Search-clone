@@ -1,11 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './scss/index.css';
-import App from './App';
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
+import ReactDOM from 'react-dom';
+import React from 'react';
 import resultsReducer from './store/resultsReducer';
-// import {store} from './store/resultsReducer'
+import App from './App';
+import './scss/index.css';
 
 const app = combineReducers({
   resultsReducer

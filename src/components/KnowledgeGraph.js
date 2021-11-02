@@ -24,7 +24,6 @@ const KnowledgeGraph = ({knowledgeGraph}) => {
                             )
                         })
                     }
-                    {/* <img className="knowledge__image" src={knowledgeGraph.images[0]} alt="" /> */}
                 </div>
                 <div className="knowledge__title-container">
                     <h2 className="knowledge__title">{knowledgeGraph.title}</h2>

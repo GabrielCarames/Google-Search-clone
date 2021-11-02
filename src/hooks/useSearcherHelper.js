@@ -1,19 +1,18 @@
-import axios from "axios"
 import { useContext, useState } from "react"
-import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import LoadingContext from "../contexts/LoadingContext"
-// import { store } from "../store/resultsReducer"
+import axios from "axios"
 
 export function useSearcherHelper () {
 
-    const [ search, setSearch] = useState(null)
-    let history = useHistory()
-    const { setLoadingResults } = useContext(LoadingContext)
-    const dispatch = useDispatch()
-
     const [ country, setCountry] = useState(undefined)
     const [ region, setRegion] = useState(undefined)
+    const [ search, setSearch] = useState(null)
+
+    const { setLoadingResults } = useContext(LoadingContext)
+    const dispatch = useDispatch()
+    let history = useHistory()
 
     const handleChange = (e) => {
         setSearch({
@@ -31,11 +30,10 @@ export function useSearcherHelper () {
             q: toSearch,
             "location": `${region} Province,${country}`,
         }
+        
         setLoadingResults(true)
         axios.get('https://api.scaleserp.com/search', { params })
         .then(response => {
-            // console.log(JSON.stringify(response.data, 0, 2));
-            // console.log(JSON.stringify(response.data.organic_results, 0 ,2))
             dispatch({
                 type: '@updateResults',
                 payload: response.data

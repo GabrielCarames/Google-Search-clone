@@ -1,5 +1,5 @@
 import useSearcherHelper from "../hooks/useSearcherHelper"
-import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector';
+import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
 
 const Searcher = () => {
 
@@ -39,7 +39,7 @@ const Searcher = () => {
                 </div>
                 <div className="searcher__buttons-container">
                     <button className="searcher__search-button" onClick={() => {searchSubmit()}}>
-                        Buscar con Google
+                        Search with Google
                     </button>
                 </div>
             </div>

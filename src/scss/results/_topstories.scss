@@ -6,9 +6,6 @@
         display: flex;
         align-items: center;
         color: #e8eaed;
-        .fa-newspaper {
-
-        }
         .top-histories__title {
             margin-left: 15px;
             font-size: 22px;
@@ -78,16 +75,10 @@
         border-left: 0;
         .top-histories__title-container {
             margin-left: 20px;
-            .fa-newspaper {
-    
-            }
-            .top-histories__title {
-            }
         }
         .top-histories__list {
             margin-left: 20px;
             overflow-x: scroll;
-            // width: 461px;
             width: 93vw;
             justify-content: flex-start;
             .list__item {
@@ -102,12 +93,6 @@
                         width: 67%;
                     }
                 }
-                .list__source {
-                }
-                .list__title {
-                }
-                .list__date {
-                }
             }
         }
     }
@@ -117,8 +102,6 @@
     .top-histories-container {
         .top-histories__list {
             width: auto;
-            .list__item {
-            }
         }
     }
 }

@@ -15,7 +15,6 @@ const OrganicResults = ({organicResults}) => {
         )
     }
 
-
     return (
         <div className="results__organic_results-container">
             <ul className="results__list list">

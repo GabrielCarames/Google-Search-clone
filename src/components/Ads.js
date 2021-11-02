@@ -7,7 +7,7 @@ const Ads = ({ads}) => {
                 {ads && ads.map((ad) => {
                     return (
                         <li className="list__item" key={ad.position}>
-                            <cite className="list__url-container"><a className="list__url" href={ad.link}><b style={{fontSize:"14px"}} >Anuncio</b><span style={{padding:"0 5px"}}>·</span> {ad.link}</a></cite>
+                            <cite className="list__url-container"><a className="list__url" href={ad.link}><b style={{fontSize:"14px"}} >Ad</b><span style={{padding:"0 5px"}}>·</span> {ad.link}</a></cite>
                             <a href={ad.link} className="list__title">{ad.title}</a>
                             <p className="list__snippet" >{ad.description}</p>
                             <ul className="list__sitelinks sitelinks">

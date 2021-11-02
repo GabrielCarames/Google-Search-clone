@@ -1,9 +1,9 @@
+import { useSelector } from "react-redux"
+import { useContext } from "react"
 import useSearcherHelper from "../hooks/useSearcherHelper"
 import LoadingContext from "../contexts/LoadingContext"
-import { useContext } from "react"
 import SkeletonResults from "./SkeletonResults"
 import DisplayResults from "./DisplayResults"
-import { useSelector } from "react-redux"
 
 const Results = () => {
 
@@ -64,7 +64,6 @@ const Results = () => {
                     }
                 </div>
                 {loadingResults ? <SkeletonResults/> : <DisplayResults />}
-                {/* {loadingResults && <SkeletonResults/>} */}
 
             </div>
         </main>

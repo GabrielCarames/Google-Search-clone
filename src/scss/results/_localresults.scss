@@ -40,25 +40,6 @@
                             font-size: 14px;
                         }
                     }
-                    // .list__title {
-                    //     color: #bdc1c6;
-                    //     line-height: 0;
-                    //     margin-top: 20px;
-                    //     margin-bottom: 20px;
-                    //     font-size: 16px;
-                    // }
-                    // .list__rating {
-                    //     line-height: .5;
-                    //     font-size: 14px;
-                    // }
-                    // .list__ubication {
-                    //     line-height: .5;
-                    //     font-size: 14px;
-                    // }
-                    // .list__description {
-                    //     line-height: .5;
-                    //     font-size: 14px;
-                    // }
                 }
             }
             .list__right-section {
@@ -114,28 +95,6 @@
                 box-sizing: border-box;
                 &:last-of-type {
                     border-bottom: 1px solid #3c4043;
-                }
-                .list__left-section {
-                    .list__letter {
-                    }
-                    .list__data-container {
-                        .list__title {
-                        }
-                        .list__extension-list {
-                            .list__extension-item {
-                            }
-                        }
-                    }
-                }
-                .list__right-section {
-                    .list__image-container {
-                        .list__image {
-                        }
-                    }
-                    .list__website-container {
-                        .list__website-logo {
-                        }
-                    }
                 }
             }
         }

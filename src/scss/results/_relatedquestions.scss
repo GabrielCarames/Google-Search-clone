@@ -26,9 +26,6 @@
                     line-height: 0;
                     font-weight: normal;
                 }
-                .fa-chevron-down {
-                    
-                }
             }
             .list__accordion-body {
                 display: none;
@@ -111,19 +108,11 @@
                     &.active {
                         max-height: unset;
                     }
-                    .body__text {
-                    }
                     .body__link-container {
                         margin-bottom: 10px;
-                        .body__link {
-                        }
                     }
                     .body__title {
                         line-height: 0;
-                    }
-                    .body__search-for-title {
-                        .body__search-for {
-                        }
                     }
                 }
             }

@@ -103,35 +103,17 @@
         margin-top: 20px;
         .realted-searches__header {
             border: none;
-            .related-searches__title {
-            }
         }
         .related-searches__body {
             .related-searches__group-container {
-                .group__title {
-                }
                 .group__list {
                     width: 87vw;
                     overflow-x: scroll;
-                    .list__item {
-                        .list__image {
-                        }
-                        .list__query {
-                        }
-                    }
                 }
             }
             .related-searches__group-standard {
                 .standard__list {
                     grid-template-columns: 100%;
-                    .list__item-container {
-                        .list__item {
-                            .fa-search {
-                            }
-                            .list__link {
-                            }
-                        }
-                    }
                 }
             }
         }
