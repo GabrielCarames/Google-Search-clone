@@ -21,7 +21,7 @@ const OrganicResults = ({organicResults}) => {
             <ul className="results__list list">
                 {organicResults && organicResults.map((result) => {
                     return (
-                        <li className="list__item" key={result.position}>
+                        <li className={result.thumbnail ? "list__item--thumbnail" : "list__item"}  key={result.position}>
                             <div className="list__left-section">
                                 <cite className="list__url-container"><a className="list__url" href={result.link}>{result.displayed_link}</a></cite>
                                 <a href={result.link} className="list__title">{result.title}</a>
@@ -29,7 +29,7 @@ const OrganicResults = ({organicResults}) => {
                                 {result.sitelinks ? result.sitelinks ? displaySiteLinks(result.sitelinks.inline) : displaySiteLinks(result.sitelinks.expanded) : ''} 
                             </div>
                             {result.thumbnail && <div className="list__right-section">
-                                <img className="list__image" src={result.thumbnail_image} alt="" />
+                                <img className="list__image" src={result.thumbnail_image} alt="thumbnail" />
                             </div>}
                         </li>
                     )

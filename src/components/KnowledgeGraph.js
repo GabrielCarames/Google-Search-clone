@@ -3,7 +3,7 @@ const KnowledgeGraph = ({knowledgeGraph}) => {
 
     const attributesFilter = (knowledgeGraph) => {
         const filteredAttributes = knowledgeGraph.known_attributes.filter((attribute) => attribute.attribute.search("downwards") === -1)
-        return filteredAttributes.map((attribute, i) => {
+        return filteredAttributes.slice(0, 5).map((attribute, i) => {
             return (
                 <li className="list__item" key={i}>
                     <a className="list__link" href={attribute.link}><p className="list__name">{attribute.name}</p></a>
@@ -17,7 +17,14 @@ const KnowledgeGraph = ({knowledgeGraph}) => {
         <div className="results__knowledge-container knowledge">
             <header className="knowledge__header">
                 <div className="knowledge__images-container">
-                    <img className="knowledge__image" src={knowledgeGraph.images[0]} alt="" />
+                    {
+                        knowledgeGraph.images.map((image) => {
+                            return (
+                            <img className="knowledge__image" src={image} alt="" />
+                            )
+                        })
+                    }
+                    {/* <img className="knowledge__image" src={knowledgeGraph.images[0]} alt="" /> */}
                 </div>
                 <div className="knowledge__title-container">
                     <h2 className="knowledge__title">{knowledgeGraph.title}</h2>

@@ -8,7 +8,10 @@
         .list__item {
             list-style: none;
             color: $text-white-color;
-            margin-top: 30px;
+            margin-top: 10px;
+            &:nth-child(1) {
+                margin-top: 0px;
+            }
             .list__url-container {
                 display: block;
                 cursor: pointer;
@@ -50,6 +53,39 @@
                         text-decoration: none;
                         &:hover {
                             text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px){
+    .ads-container {
+        width: 100vw;
+        margin-left: 0;
+        .ads__list {
+            .list__item {
+                width: 100%;
+                border: 1px solid #3c4043;
+                border-left: none;
+                border-right: none;
+                padding: 20px;
+                box-sizing: border-box;
+                .list__url-container {
+                    margin-bottom: 20px;
+                    .list__url {
+                        line-height: normal;
+                    }
+                }
+                .list__title {
+                }
+                .list__snippet {
+                }
+                .list__sitelinks {
+                    .sitelinks__item {
+                        .sitelinks__title {
                         }
                     }
                 }

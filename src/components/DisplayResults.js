@@ -27,7 +27,7 @@ const DisplayResults = () => {
                 {top_stories && <TopStories topStories={top_stories} />}
                 <RelatedQuestions relatedQuestions={related_questions} />
                 <Ads ads={ads} />
-                {local_map.image && <LocalMap localMap={local_map} />}
+                {local_map && local_map.image && <LocalMap localMap={local_map} />}
                 {local_results && <LocalResults localResults={local_results} />} 
                 {inline_tweets && <InlineTweets inlineTweets={inline_tweets} />}
                 <OrganicResults organicResults={organic_results} />

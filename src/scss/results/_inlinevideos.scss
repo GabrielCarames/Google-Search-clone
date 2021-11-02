@@ -1,5 +1,6 @@
 .inline-videos-container {
     margin-left: 180px;
+    margin-top: 10px;
     .inline-videos__title-container {
         display: flex;
         align-items: center;
@@ -25,6 +26,7 @@
                 align-items: center;
                 border-top: 1px solid #3c4043;
                 padding: 10px;
+                text-decoration: none;
                 &:hover {
                     .list__title {
                         text-decoration: underline;
@@ -56,4 +58,39 @@
             }
         }
     }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px){
+    .inline-videos-container {
+        margin-left: 0;
+        padding: 20px;
+        border: 1px solid #3c4043;
+        border-right: 0;
+        border-left: 0;
+        .inline-videos__title-container {
+            .inline-videos__title {
+            }
+        }
+        .inline-videos__list {
+            .list__item-container {
+                .list__item {
+                    border-top: 0;
+                    border-bottom: 1px solid #3c4043;
+                    .list__image-container {
+                        min-width: 124px;
+                    }
+                    .list__description-container {
+                        .list__title {
+                            line-height: normal;
+                        }
+                        .list__source {
+                            line-height: normal;
+                        }
+                        .list__date {
+                        }
+                    }
+                }
+            }
+        }
+    }    
 }

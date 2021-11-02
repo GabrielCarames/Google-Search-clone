@@ -10,6 +10,12 @@
     margin-top: 60px;
     display: flex;
     justify-content: center;
+    .pagination__more-button-container {
+        display: none;
+        .pagination__more-button {
+
+        }
+    }
     .pagination__letters {
         display: flex;
         align-items: center;
@@ -97,6 +103,73 @@
                 text-decoration: none;
                 &:hover {
                     text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px){
+    .pagination-container {
+        margin-left: 0;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        .pagination__more-button-container {
+            display: inline;
+            width: 100%;
+            height: 42px;
+            padding: 20px;
+            padding-top: 0;
+            border-radius: 20px;
+            .pagination__more-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                // margin: 20px;
+                width: 100%;
+                height: 42px;
+                border-radius: 20px;
+                border: none;
+                color: #bdc1c6;
+                background-color: #303134;
+                text-decoration: none;
+                font-size: 14px;
+                .fa-chevron-down {
+                    position: absolute;
+                    left: 20px;
+                    margin-left: 20px;
+                }
+                .pagination__more-button-text {
+                }
+            }
+        }
+        .pagination__letters {
+            display: none;
+            .letter__G {
+            }
+            .letter__o-list {
+                .letter__o-item {
+                    .letter__o-container {
+                        .letter__o {
+                        }
+                        .letter__o-page-number {
+                        }
+                    }
+                }
+            }
+            .letter__last-three {
+                .last__letters-header {
+                    .last__g-letter {
+                    }
+                    .last__l-letter {
+                    }
+                    .last__e-letter {
+                    }
+                    .fa-chevron-right {
+                    }
+                }
+                .last__letter-next {
                 }
             }
         }

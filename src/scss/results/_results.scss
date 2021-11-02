@@ -5,7 +5,9 @@ $title-color: #8ab4f8;
     height: 100%;
     .results-container {
         height: 100%;
+        width: 100%;
         .results-navbar-container {
+            width: 100%;
             .results-navbar {
                 display: flex;
                 align-items: center;
@@ -25,7 +27,8 @@ $title-color: #8ab4f8;
                         display: flex;
                         flex-direction: row-reverse;
                         align-items: center;
-                        width: 690px;
+                        max-width: 690px;
+                        width: 100%;
                         border-radius: 24px;
                         z-index: 3;
                         height: 44px;
@@ -106,6 +109,82 @@ $title-color: #8ab4f8;
         .results-results-container {
             height: 100%;
             display: flex;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px){
+    .results-main {
+        overflow-x: auto;
+        .results-container {
+            .results-navbar-container {
+                .results-navbar {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 0;
+                    .navbar__logo-container {
+                        .navbar__logo{
+                        }
+                    }
+                    .navbar__input-container {
+                        margin-top: 20px;
+                        margin-left: 0px;
+                        width: 80%;
+                        .navbar__input-container-section {
+                            width: auto;
+                            max-width: unset;
+                            .navbar__search-icon {
+                                .fa-search {
+            
+                                }
+                            }
+                            .navbar__input {
+                            }
+                        }
+                    }
+                    .navbar__dark-mode-container {
+                        .navbar__dark-mode {
+        
+                        }
+                    }
+                }
+                .results-navbar-results-sections {
+                    margin-left: 0;
+                    .sections__list {
+                        justify-content: center;
+                        margin-left: 0;
+                        padding: 0;
+                        .list__item {
+                            margin-left: 0;
+                            display:initial;
+                            i {
+                                display: none;
+                            } 
+                            .list__title {
+                            }
+                        }
+                    }
+                }
+                .results-navbar__divider {
+                }
+                .results-navbar__search-metadata {
+                    display: flex;
+                    justify-content: center;
+                    margin-left: 0;
+                }
+            }
+            .results-results-container {
+                flex-direction: column-reverse;
+                align-items: center;
+                height: auto;
+                .results__left-section {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
         }
     }
 }

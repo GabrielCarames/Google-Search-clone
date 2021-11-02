@@ -10,10 +10,12 @@ const InlineTweets = ({inlineTweets}) => {
                 {inlineTweets.map((tweet, id) => {
                     return (
                         <li className="list__item" key={id}>
-                            <a href={tweet.link}><img className="list__img" src={tweet.thumbnail} alt="" /></a>
-                            <a className="list__source" href={tweet.link}>{tweet.source}</a>
-                            <a className="list__snippet" href={tweet.link}>{tweet.snippet}</a>
-                            <a className="list__date" href={tweet.link}>Twitter {tweet.date}</a>
+                            <a href="">
+                                <img className="list__img" src={tweet.thumbnail} alt="" />
+                                <cite className="list__source" href={tweet.link}>{tweet.source}</cite>
+                                <p className="list__snippet" href={tweet.link}>{tweet.snippet}</p>
+                                <p className="list__date" href={tweet.link}>Twitter {tweet.date}</p>
+                            </a>
                         </li>
                     )
                 })}

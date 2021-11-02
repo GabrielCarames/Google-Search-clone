@@ -2,7 +2,7 @@
     width: 366px;
     height: min-content;
     margin-left: 100px;
-    margin-top: 0px;
+    margin-top: 20px;
     border: 1px solid #3c4043;
     border-radius: 8px;
     .knowledge__header {
@@ -10,9 +10,11 @@
         .knowledge__images-container {
             width: 100%;
             max-height: 220px;
+            overflow-x: auto;
+            white-space: nowrap;
             .knowledge__image {
-                width: 100%;
-                height: auto;
+                width: auto;
+                height: 170px;
                 max-height: 220px;
                 object-fit: cover;
             }
@@ -80,6 +82,59 @@
                     overflow: hidden;
                     line-height:1;
                     width: 204px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px){
+    .results__knowledge-container {
+        margin-left: 0;
+        width: auto;
+        border-right: 0;
+        border-left: 0;
+        .knowledge__header {
+            display: flex;
+            flex-direction: column-reverse;
+            .knowledge__images-container {
+                overflow-x: auto;
+                white-space: nowrap;
+                width: 100vw;
+                .knowledge__image {
+                    height: 144px;
+                    width: auto;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    &:nth-child(1) {
+                        margin-left: 20px;
+                    }
+                }
+            }
+            .knowledge__title-container {
+                margin: 20px;
+                .knowledge__title {
+                }
+                .knowledge__type {
+                }
+            }
+        }
+        .knowledge__data-container {
+            margin: 20px;
+            .knowledge__description-container {
+                .knowledge__description {
+                }
+                .knowledge__source {
+                }
+            }
+            .knowledge__known-attributes {
+                .list__item {
+                    .list__link {
+                        .list__name {
+                        }
+                    }
+                    .list__value {
+                    }
                 }
             }
         }

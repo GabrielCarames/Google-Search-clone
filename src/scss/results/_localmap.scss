@@ -3,6 +3,7 @@
     width: 670px;
     margin-left: 180px;
     margin-bottom: 70px;
+    margin-top: 20px;
     .local-map {
         .map__image-title {
             color: #dedede;
@@ -14,6 +15,32 @@
                 height: 200px;
                 width: 670px;
                 border-radius: 8px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px){
+    .local-map-container {
+        width: 100vw;
+        height: min-content;
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        .local-map {
+            box-sizing: border-box;
+            .map__image-title {
+                margin-left: 20px;
+            }
+            .map__image-container {
+                width: 100%;
+                height: 170px;
+                display: inline-block;
+                .map__image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
         }
     }
