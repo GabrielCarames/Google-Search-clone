@@ -30,16 +30,16 @@ Google-Search-clone
 <br />
 
 ## Motor de búsqueda
-* Buscador a partir de localización de país y región. El motor utiliza la API de Scale SERP ([Link](https://app.scaleserp.com/playground)) para la visualización de datos.
+* Buscador a partir de localización de ***país*** y ***región***. El motor utiliza la ***API de Scale SERP*** ([Link](https://app.scaleserp.com/playground)) para la visualización de datos.
 
 ## Localización manual
-* Cuenta con la opción de añadir una ubicación específica a partir del país y región establecidos.
+* Cuenta con la opción de añadir una ubicación específica a partir del ***país*** y ***región*** establecidos.
 
 ## Multiples secciones
-* A partir de la búsqueda, se mostrarán las páginas más visitadas, tweets recientes, videos relacionados, lugares cercanos por Google Maps, etc. 
+* A partir de la búsqueda, se mostrarán las ***páginas más visitadas, tweets recientes, videos relacionados, lugares cercanos por Google Maps***, etc. 
 
 ## Diseño responsivo
-* Posee un diseño adaptable a distintas resoluciones y dispositivos móviles
+* Posee un diseño adaptable a ***distintas resoluciones y dispositivos móviles***
 
 <br />
 <br />
@@ -47,7 +47,7 @@ Google-Search-clone
 <div align="center">
   
 ## Aviso
-El proyecto se encuentra en desarrollo y cuenta con una variedad de fallos en proceso de revisión y corrección. Es posible que no todas las búsquedas se visualicen correctamente. Búsquedas recomendadas: Pizza, Bitcoin
+El proyecto se encuentra en ***desarrollo*** y cuenta con una variedad de ***fallos*** en proceso de ***revisión*** y ***corrección***. Es posible que no todas las búsquedas se visualicen correctamente. Búsquedas recomendadas: ***Pizza***, ***Bitcoin***
 
 </div>
 
