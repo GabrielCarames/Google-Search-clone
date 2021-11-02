@@ -71,6 +71,7 @@ $title-color: #8ab4f8;
             .results-navbar-results-sections {
                 color: #969ba1;
                 margin-left: 120px;
+                border-bottom: 1px solid #3c4043;
                 .sections__list {
                     list-style: none;
                     display: flex;
@@ -94,10 +95,6 @@ $title-color: #8ab4f8;
                         }
                     }
                 }
-            }
-            .results-navbar__divider {
-                color: #3c4043;
-                margin: 0;
             }
             .results-navbar__search-metadata {
                 color: #9aa0a6;
@@ -137,7 +134,7 @@ $title-color: #8ab4f8;
                             max-width: unset;
                             .navbar__search-icon {
                                 .fa-search {
-            
+                                    margin-right: 10px;
                                 }
                             }
                             .navbar__input {

@@ -36,11 +36,10 @@
             }
         }
     }
-    .knowledge__hr {
-        color: #3c4043;
-    }
     .knowledge__data-container {
         margin: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #3c4043;
         .knowledge__description-container {
             .knowledge__description {
                 display: inline;
@@ -121,6 +120,8 @@
         }
         .knowledge__data-container {
             margin: 20px;
+            padding-top: 0;
+            border: none;
             .knowledge__description-container {
                 .knowledge__description {
                 }

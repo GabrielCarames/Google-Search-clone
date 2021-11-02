@@ -71,13 +71,89 @@
             display: flex;
             justify-content: space-evenly;
             width: 350px;
-            margin-top: 18px;
+            margin-top: 10px;
             height: 70px;
             .searcher__search-button {
                 @include button;
             }
-            .searcher__search-button--lucky {
-                @include button;
+        }
+        .searcher__country-picker {
+            display: flex;
+            width: 350px;
+            margin-top: 20px;
+            .searcher__country, .searcher__region{
+                width: 155px;
+                height: 36px;
+                background-color: #303134;
+                color: #e8eaed;
+                border: none;
+                padding-left: 10px;
+                margin-left: 10px;
+            }
+            .searcher__region {
+                width: 166px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .searcher-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position:relative ;
+        height: 86.5%;
+        .searcher-searcher-container {
+            .searcher__logo-container {
+                .searcher__logo {
+                    width: 60vw;
+                    height: auto;
+                    max-width: 272px;
+                    max-height: 95.5px;
+                }
+            }
+            .searcher__input-container {
+                width: 93vw;
+                height: 11vw; 
+                max-width: 584px;
+                max-height: 44px;
+                &:hover {
+                    .searcher__input {
+                    }
+                }
+                .searcher__search-icon {
+                }
+                .searcher__input {
+                    // width: auto;
+                    height: auto; 
+                }
+            }
+            .searcher__buttons-container { 
+                width: 93vw;
+                justify-content: center;
+                .searcher__search-button, .searcher__search-button--lucky {
+                    height: min-content;
+                    width: 50vw;
+                    max-width: 155px;
+                }
+            }
+            .searcher__country-picker {
+                display: flex;
+                justify-content: center;
+                width: 93vw;
+                margin-top: 20px;
+                margin-left: -10px;
+                .searcher__country, .searcher__region{
+                    width: 50vw;
+                    max-width: 155px;
+                    height: 36px;
+                    background-color: #303134;
+                    color: #e8eaed;
+                    border: none;
+                    padding-left: 10px;
+                    margin-left: 10px;
+                }
             }
         }
     }

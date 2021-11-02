@@ -12,6 +12,8 @@ export function useSearcherHelper () {
     const { setLoadingResults } = useContext(LoadingContext)
     const dispatch = useDispatch()
 
+    const [ country, setCountry] = useState(undefined)
+    const [ region, setRegion] = useState(undefined)
 
     const handleChange = (e) => {
         setSearch({
@@ -23,24 +25,11 @@ export function useSearcherHelper () {
     const searchSubmit = () => {
         const toSearch = search.search
         history.push("/results")
-
-        // set up the request parameters
-        // const locationParams = {
-        //     api_key: "5F6850F10FB74BA198C5CECD43E031F3",
-        //     q: "london"
-        // }
-        
-        // axios.get('https://api.scaleserp.com/locations', { locationParams })
-        // .then(response => {
-        //     console.log(JSON.stringify(response.data, 0, 2));
-        // }).catch(error => {
-        //     console.log(error);
-        // })
         
         const params = {
             api_key: "5F6850F10FB74BA198C5CECD43E031F3",
             q: toSearch,
-            "location": "New York,New York,United States",
+            "location": `${region} Province,${country}`,
         }
         setLoadingResults(true)
         axios.get('https://api.scaleserp.com/search', { params })
@@ -57,8 +46,24 @@ export function useSearcherHelper () {
         })
     }
 
+    const selectCountry = (country) => {
+        setCountry(country)
+    }
+
+    const getCountryValue = () => {
+        return country
+    }
+
+    const selectRegion = (region) => {
+        setRegion(region)
+    }
+
+    const getRegionValue = () => {
+        return region
+    }
+
     return {
-        handleChange, searchSubmit
+        handleChange, searchSubmit, selectCountry, getCountryValue, selectRegion, getRegionValue
     }
 }
 

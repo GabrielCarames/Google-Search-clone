@@ -6,7 +6,7 @@ const Pagination = ({pagination}) => {
         <div className="pagination-container">
             <div className="pagination__more-button-container">
                 <a className="pagination__more-button" href={pagination.next}>
-                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    <i className="fas fa-chevron-down" aria-hidden="true"></i>
                     <p className="pagination__more-button-text">Ver más</p>
                 </a>
             </div>

@@ -1,8 +1,9 @@
 import useSearcherHelper from "../hooks/useSearcherHelper"
+import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector';
 
 const Searcher = () => {
 
-    const { handleChange, searchSubmit } = useSearcherHelper()
+    const { handleChange, searchSubmit, selectCountry, getCountryValue, selectRegion, getRegionValue } = useSearcherHelper()
 
     return (
         <main className="searcher-main">
@@ -18,12 +19,27 @@ const Searcher = () => {
 
                     </input>
                 </div>
+                <div className="searcher__country-picker">
+                    <CountryDropdown
+                        defaultOptionLabel={"Select Country"}
+                        value={getCountryValue()}
+                        onChange={(val) => selectCountry(val)}
+                        classes="searcher__country"
+                        />
+                        <RegionDropdown
+                            country={getCountryValue()}
+                            value={getRegionValue()}
+                            blankOptionLabel="Select Region"
+                            onChange={(val) => selectRegion(val)}
+                            classes="searcher__region"
+                            blacklist={{
+                                AR: ["Capital Federal"],
+                            }}
+                        />
+                </div>
                 <div className="searcher__buttons-container">
                     <button className="searcher__search-button" onClick={() => {searchSubmit()}}>
                         Buscar con Google
-                    </button>
-                    <button className="searcher__search-button--lucky">
-                        Me siento con suerte
                     </button>
                 </div>
             </div>

@@ -113,7 +113,7 @@ body .app {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   width: 350px;
-  margin-top: 18px;
+  margin-top: 10px;
   height: 70px;
 }
 
@@ -136,23 +136,91 @@ body .app {
   border: 1px solid #5f6368;
 }
 
-.searcher-main .searcher-searcher-container .searcher__buttons-container .searcher__search-button--lucky {
-  background-color: #303134;
-  border: 1px solid #303134;
-  border-radius: 4px;
-  color: #e8eaed;
-  font-family: "arial";
-  font-size: 14px;
-  margin: 11px 4px;
-  padding: 0 16px;
-  line-height: 27px;
-  height: 36px;
-  min-width: 54px;
-  cursor: pointer;
+.searcher-main .searcher-searcher-container .searcher__country-picker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 350px;
+  margin-top: 20px;
 }
 
-.searcher-main .searcher-searcher-container .searcher__buttons-container .searcher__search-button--lucky:hover {
-  border: 1px solid #5f6368;
+.searcher-main .searcher-searcher-container .searcher__country-picker .searcher__country, .searcher-main .searcher-searcher-container .searcher__country-picker .searcher__region {
+  width: 155px;
+  height: 36px;
+  background-color: #303134;
+  color: #e8eaed;
+  border: none;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
+.searcher-main .searcher-searcher-container .searcher__country-picker .searcher__region {
+  width: 166px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .searcher-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    height: 86.5%;
+  }
+  .searcher-main .searcher-searcher-container .searcher__logo-container .searcher__logo {
+    width: 60vw;
+    height: auto;
+    max-width: 272px;
+    max-height: 95.5px;
+  }
+  .searcher-main .searcher-searcher-container .searcher__input-container {
+    width: 93vw;
+    height: 11vw;
+    max-width: 584px;
+    max-height: 44px;
+  }
+  .searcher-main .searcher-searcher-container .searcher__input-container .searcher__input {
+    height: auto;
+  }
+  .searcher-main .searcher-searcher-container .searcher__buttons-container {
+    width: 93vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .searcher-main .searcher-searcher-container .searcher__buttons-container .searcher__search-button, .searcher-main .searcher-searcher-container .searcher__buttons-container .searcher__search-button--lucky {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    width: 50vw;
+    max-width: 155px;
+  }
+  .searcher-main .searcher-searcher-container .searcher__country-picker {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 93vw;
+    margin-top: 20px;
+    margin-left: -10px;
+  }
+  .searcher-main .searcher-searcher-container .searcher__country-picker .searcher__country, .searcher-main .searcher-searcher-container .searcher__country-picker .searcher__region {
+    width: 50vw;
+    max-width: 155px;
+    height: 36px;
+    background-color: #303134;
+    color: #e8eaed;
+    border: none;
+    padding-left: 10px;
+    margin-left: 10px;
+  }
 }
 
 .results-main {
@@ -252,6 +320,7 @@ body .app {
 .results-main .results-container .results-navbar-container .results-navbar-results-sections {
   color: #969ba1;
   margin-left: 120px;
+  border-bottom: 1px solid #3c4043;
 }
 
 .results-main .results-container .results-navbar-container .results-navbar-results-sections .sections__list {
@@ -286,11 +355,6 @@ body .app {
   font-size: 14px;
   font-weight: normal;
   margin-left: 10px;
-}
-
-.results-main .results-container .results-navbar-container .results-navbar__divider {
-  color: #3c4043;
-  margin: 0;
 }
 
 .results-main .results-container .results-navbar-container .results-navbar__search-metadata {
@@ -335,6 +399,9 @@ body .app {
   .results-main .results-container .results-navbar-container .results-navbar .navbar__input-container .navbar__input-container-section {
     width: auto;
     max-width: unset;
+  }
+  .results-main .results-container .results-navbar-container .results-navbar .navbar__input-container .navbar__input-container-section .navbar__search-icon .fa-search {
+    margin-right: 10px;
   }
   .results-main .results-container .results-navbar-container .results-navbar-results-sections {
     margin-left: 0;
@@ -391,7 +458,6 @@ body .app {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-top: 1px solid red;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -409,10 +475,16 @@ body .app {
 
 .results-skeleton-results-container .results__organic_results-container .results__list {
   padding-left: 0;
-  padding-top: 40px;
 }
 
 .results-skeleton-results-container .results__organic_results-container .results__list .list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   list-style: none;
   color: rgba(0, 0, 255, 0);
   margin-top: 40px;
@@ -421,6 +493,9 @@ body .app {
 .results-skeleton-results-container .results__organic_results-container .results__list .list__item .list__url-container {
   background-color: #303134;
   width: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -460,6 +535,7 @@ body .app {
   border-radius: 30px;
   -webkit-animation: 3s backgroundAnimation infinite;
           animation: 3s backgroundAnimation infinite;
+  height: 50px;
 }
 
 .results-skeleton-results-container .results__organic_results-container .results__list .list__item .list__snippet-container .list__snippet {
@@ -470,7 +546,6 @@ body .app {
   width: 400px;
   height: 400px;
   margin-left: 100px;
-  margin-top: 100px;
   border: 1px solid #3c4043;
   padding: 10px;
   -webkit-user-select: none;
@@ -557,6 +632,39 @@ body .app {
   }
   100% {
     background-color: #272626;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .results-skeleton-results-container {
+    width: 100vw;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .results-skeleton-results-container .results__organic_results-container {
+    width: 100vw;
+    margin-left: 0;
+  }
+  .results-skeleton-results-container .results__organic_results-container .results__list .list__item {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  .results-skeleton-results-container .results__knowledge-container {
+    width: 100vw;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 30px;
+    margin-top: 0;
   }
 }
 
@@ -841,12 +949,10 @@ body .app {
   color: #9aa0a6;
 }
 
-.results__knowledge-container .knowledge__hr {
-  color: #3c4043;
-}
-
 .results__knowledge-container .knowledge__data-container {
   margin: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #3c4043;
 }
 
 .results__knowledge-container .knowledge__data-container .knowledge__description-container .knowledge__description {
@@ -938,6 +1044,8 @@ body .app {
   }
   .results__knowledge-container .knowledge__data-container {
     margin: 20px;
+    padding-top: 0;
+    border: none;
   }
 }
 
@@ -1330,7 +1438,7 @@ body .app {
 
 .related-searches-container {
   margin-left: 180px;
-  margin-top: 20px;
+  margin-top: 40px;
   color: #bdc1c6;
 }
 
@@ -1454,6 +1562,7 @@ body .app {
     border: 1px solid #3c4043;
     border-right: 0;
     border-left: 0;
+    margin-top: 20px;
   }
   .related-searches-container .realted-searches__header {
     border: none;
@@ -1655,6 +1764,7 @@ body .app {
     background-color: #303134;
     text-decoration: none;
     font-size: 14px;
+    position: relative;
   }
   .pagination-container .pagination__more-button-container .pagination__more-button .fa-chevron-down {
     position: absolute;

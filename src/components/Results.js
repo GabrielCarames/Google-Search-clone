@@ -9,9 +9,7 @@ const Results = () => {
 
     const { handleChange } = useSearcherHelper()
     const { loadingResults } = useContext(LoadingContext)
-    const results = useSelector(state => state.resultsReducer)
-    // const { search_information, search_parameters } = results
-    // console.log("results", results)
+    const results = useSelector(state => state.resultsReducer).payload
 
     return (
         <main className="results-main">
@@ -19,7 +17,7 @@ const Results = () => {
                 <div className="results-navbar-container">
                     <nav className="results-navbar navbar">
                         <div className="navbar__logo-container">
-                            <a className="navbar__back-home" href="#/">
+                            <a className="navbar__back-home" href="http://localhost:3000/">
                                 <img className="navbar__logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png" alt="google-logo" />
                             </a>
                         </div>
@@ -59,12 +57,15 @@ const Results = () => {
                             </li>
                         </ul>
                     </div>
-                    <hr className="results-navbar__divider"/>
-                    <h3 className="results-navbar__search-metadata">
-                        About {results && results.search_information && results.search_information.total_results.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} results ({results && results.search_information && results.search_information.time_taken_displayed} seconds)
-                    </h3>
+                    {results && !loadingResults && 
+                        <h3 className="results-navbar__search-metadata">
+                            About {results && results.search_information && results.search_information.total_results.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} results ({results && results.search_information && results.search_information.time_taken_displayed} seconds)
+                        </h3>
+                    }
                 </div>
                 {loadingResults ? <SkeletonResults/> : <DisplayResults />}
+                {/* {loadingResults && <SkeletonResults/>} */}
+
             </div>
         </main>
     )

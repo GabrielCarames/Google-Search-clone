@@ -10,7 +10,7 @@ const RelatedQuestions = ({relatedQuestions}) => {
             </h2>
             <ul className="related-questions__list list">
                 {
-                    relatedQuestions && relatedQuestions.map((question, id) => {
+                    relatedQuestions.map((question, id) => {
                         return (
                             <li className="list__item" key={id}>
                                 <div className="list__accordion-header header" onClick={() => activeAccordion === id ? setActiveAccordion(false) : setActiveAccordion(id)}>

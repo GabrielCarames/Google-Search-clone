@@ -18,9 +18,9 @@ const KnowledgeGraph = ({knowledgeGraph}) => {
             <header className="knowledge__header">
                 <div className="knowledge__images-container">
                     {
-                        knowledgeGraph.images.map((image) => {
+                        knowledgeGraph.images.map((image, id) => {
                             return (
-                            <img className="knowledge__image" src={image} alt="" />
+                                <img className="knowledge__image" src={image} alt="" key={id} />
                             )
                         })
                     }
@@ -31,7 +31,6 @@ const KnowledgeGraph = ({knowledgeGraph}) => {
                     <h3 className="knowledge__type">{knowledgeGraph.type}</h3>
                 </div>
             </header>
-            <hr className="knowledge__hr" />
             <div className="knowledge__data-container">
                 <div className="knowledge__description-container">
                     <p className="knowledge__description">{knowledgeGraph.description}</p>
