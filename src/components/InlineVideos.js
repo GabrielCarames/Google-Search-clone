@@ -13,7 +13,7 @@ const InlineVideos = ({inlineVideos}) => {
                         return (
                             <li className="list__item-container" key={video.position}>
                                 <a className="list__item" href={video.link}>
-                                    <div className="list__image-container"></div>
+                                    {/* <div className="list__image-container"></div> */}
                                     <div className="list__description-container">
                                         <h4 className="list__title">{video.title}</h4>
                                         <p className="list__source">{video.source}</p>

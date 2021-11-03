@@ -3,11 +3,13 @@ import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import React from 'react';
 import resultsReducer from './store/resultsReducer';
+import searchReducer from './store/searchReducer';
 import App from './App';
 import './scss/index.css';
 
 const app = combineReducers({
-  resultsReducer
+  resultsReducer,
+  searchReducer
 })
 
 let store = createStore(app, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())

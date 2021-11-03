@@ -31,7 +31,7 @@ const DisplayResults = () => {
                 {related_searches && <RelatedSearches relatedSearches={related_searches} />}
                 <Pagination pagination={pagination} />
             </div>
-            <KnowledgeGraph knowledgeGraph={knowledge_graph} />
+            {knowledge_graph && <KnowledgeGraph knowledgeGraph={knowledge_graph} />}
         </div>
     )
 }

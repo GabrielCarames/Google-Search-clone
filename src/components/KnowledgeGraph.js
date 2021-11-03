@@ -33,10 +33,10 @@ const KnowledgeGraph = ({knowledgeGraph}) => {
             <div className="knowledge__data-container">
                 <div className="knowledge__description-container">
                     <p className="knowledge__description">{knowledgeGraph.description}</p>
-                    <a className="knowledge__source" href={knowledgeGraph.source.link}>{knowledgeGraph.source.name}</a>
+                    <a className="knowledge__source" href={knowledgeGraph.source && knowledgeGraph.source.link}>{knowledgeGraph.source && knowledgeGraph.source.name}</a>
                 </div>
                 <ul className="knowledge__known-attributes list">
-                    {knowledgeGraph && attributesFilter(knowledgeGraph)}
+                    {knowledgeGraph.known_attributes && attributesFilter(knowledgeGraph)}
                 </ul>
             </div>
         </div>

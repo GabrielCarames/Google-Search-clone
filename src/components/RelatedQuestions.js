@@ -19,8 +19,8 @@ const RelatedQuestions = ({relatedQuestions}) => {
                                 </div>
                                 <div className={activeAccordion === id ? "list__accordion-body active body" : "list__accordion-body body"}>
                                     <p className="body__text">{question.answer}</p>
-                                    <cite className="body__link-container"><a className="body__link" href={question.source.link}>{question.source.displayed_link}</a></cite>
-                                    <a className="body__title" href={question.source.link}>{question.source.title}</a>
+                                    <cite className="body__link-container"><a className="body__link" href={question.source && question.source.link}>{question.source && question.source.displayed_link}</a></cite>
+                                    <a className="body__title" href={question.source && question.source.link}>{question.source && question.source.title}</a>
                                     <p className="body__search-for-title">Search for: 
                                         <a className="body__search-for" href={question.search && question.search.link}>
                                             {question.question}

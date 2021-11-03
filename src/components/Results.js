@@ -26,7 +26,7 @@ const Results = () => {
                                 <div className="navbar__search-icon">
                                     <i className="fas fa-search"></i>
                                 </div>
-                                <input className="navbar__input" name="search" type="text" value={results && results.search_parameters && results.search_parameters.q} onChange={handleChange}>
+                                <input className="navbar__input" name="search" type="text" placeholder={results && results.search_parameters && results.search_parameters.q} onChange={handleChange}>
 
                                 </input>
                             </div>
