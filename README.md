@@ -30,7 +30,7 @@ Google-Search-clone
 <br />
 
 ## Motor de búsqueda
-* Buscador a partir de localización de ***país*** y ***región***. El motor utiliza la ***API de Scale SERP*** ([Link](https://app.scaleserp.com/playground)) para la visualización de datos.
+* Buscador a partir de localización de ***país*** y ***región***. El motor utiliza la ***API de Scale SERP*** ([Link](https://app.scaleserp.com/playground)) para la  obtención y visualización de datos.
 
 ## Localización manual
 * Cuenta con la opción de añadir una ubicación específica a partir del ***país*** y ***región*** establecidos.
