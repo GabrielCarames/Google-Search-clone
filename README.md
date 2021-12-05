@@ -47,7 +47,7 @@ Google-Search-clone
 <div align="center">
   
 ## Aviso
-El proyecto se encuentra en ***desarrollo*** y cuenta con una variedad de ***fallos*** en proceso de ***revisión*** y ***corrección***. Es posible que no todas las búsquedas se visualicen correctamente. Búsquedas recomendadas: ***Pizza***, ***Bitcoin***
+El proyecto se encuentra en ***desarrollo*** y cuenta con una variedad de ***fallos*** en proceso de ***revisión*** y ***corrección***. Es posible que no todas las búsquedas se visualicen correctamente debido a la gran magnitud de verificaciones necesarias. Búsquedas recomendadas: ***Pizza***, ***Bitcoin***
 
 </div>
 
