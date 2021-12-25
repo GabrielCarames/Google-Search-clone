@@ -6,10 +6,12 @@ import SkeletonResults from "./SkeletonResults"
 import DisplayResults from "./DisplayResults"
 
 const Results = () => {
-
-    const { handleChange } = useSearcherHelper()
+    const resultsState = useSelector(state => state.resultsReducer)
     const { loadingResults } = useContext(LoadingContext)
-    const results = useSelector(state => state.resultsReducer).payload
+    const { handleChange } = useSearcherHelper()
+    let results
+    if(resultsState) results = resultsState.payload
+    localStorage.removeItem('results')
 
     return (
         <main className="results-main">
@@ -26,7 +28,7 @@ const Results = () => {
                                 <div className="navbar__search-icon">
                                     <i className="fas fa-search"></i>
                                 </div>
-                                <input className="navbar__input" name="search" type="text" placeholder={results && results.search_parameters && results.search_parameters.q} onChange={handleChange}>
+                                <input className="navbar__input" name="search" type="search" placeholder={results && results.search_parameters && JSON.parse(results.search_parameters.q).search} onChange={handleChange}>
 
                                 </input>
                             </div>
@@ -43,15 +45,15 @@ const Results = () => {
                                 <i className="fas fa-search"></i>
                                 <h3 className="list__title">All</h3>
                             </li>
-                            <li className="list__item">
+                            <li className="list__item" onClick={() => alert("Not available yet")}>
                                 <i className="far fa-newspaper"></i>
                                 <h3 className="list__title">News</h3>
                             </li>
-                            <li className="list__item">
+                            <li className="list__item" onClick={() => alert("Not available yet")}>
                                 <i className="far fa-image"></i>
                                 <h3 className="list__title">Images</h3>
                             </li>
-                            <li className="list__item">
+                            <li className="list__item" onClick={() => alert("Not available yet")}>
                                 <i className="fab fa-youtube"></i>
                                 <h3 className="list__title">Videos</h3>
                             </li>
@@ -59,7 +61,7 @@ const Results = () => {
                     </div>
                     {results && 
                         <h3 className="results-navbar__search-metadata">
-                            About {results && results.search_information && results.search_information.total_results.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} results ({results && results.search_information && results.search_information.time_taken_displayed} seconds)
+                            About {results.search_information && results.search_information.total_results.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} results ({results && results.search_information && results.search_information.time_taken_displayed} seconds)
                         </h3>
                     }
                 </div>

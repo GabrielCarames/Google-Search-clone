@@ -1,6 +1,6 @@
+import logoYoutube from '../images/logoYoutube.png'
 
 const InlineVideos = ({inlineVideos}) => {
-    
     return (
         <div className="inline-videos-container">
             <div className="inline-videos__title-container">
@@ -13,7 +13,9 @@ const InlineVideos = ({inlineVideos}) => {
                         return (
                             <li className="list__item-container" key={video.position}>
                                 <a className="list__item" href={video.link}>
-                                    {/* <div className="list__image-container"></div> */}
+                                    <div className="list__image-container">
+                                        <img className="list__image" src={logoYoutube} alt="youtube" />
+                                    </div>
                                     <div className="list__description-container">
                                         <h4 className="list__title">{video.title}</h4>
                                         <p className="list__source">{video.source}</p>

@@ -20,7 +20,7 @@ const KnowledgeGraph = ({knowledgeGraph}) => {
                     {
                         knowledgeGraph.images.map((image, id) => {
                             return (
-                                <img className="knowledge__image" src={image} alt="" key={id} />
+                                <img className="knowledge__image" src={image} alt="knowledge" key={id} />
                             )
                         })
                     }

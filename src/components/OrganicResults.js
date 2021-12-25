@@ -20,7 +20,7 @@ const OrganicResults = ({organicResults}) => {
             <ul className="results__list list">
                 {organicResults && organicResults.map((result) => {
                     return (
-                        <li className={result.thumbnail ? "list__item--thumbnail" : "list__item"}  key={result.position}>
+                        <li className={result.thumbnail ? "list__item--thumbnail" : "list__item"} key={result.position}>
                             <div className="list__left-section">
                                 <cite className="list__url-container"><a className="list__url" href={result.link}>{result.displayed_link}</a></cite>
                                 <a href={result.link} className="list__title">{result.title}</a>

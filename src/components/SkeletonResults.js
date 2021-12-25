@@ -1,7 +1,6 @@
 
 
 const SkeletonResults = () => {
-
     return (
         <div className="results-skeleton-results-container">
             <div className="results__organic_results-container">
@@ -36,7 +35,7 @@ const SkeletonResults = () => {
                             <h3 className="list__title">Lorem ipsum dolor sit amet, consectetur</h3>
                         </div>
                         <div className="list__snippet-container">
-                            <p className="list__snippet" >Últimas Noticias de Revista ¡HOLA!: Floppy Tesouro abre las puertas de su nuevo departamento con unas vistas impresionantes, ¿Quién es Pauline Ducret, ...</p>
+                            <p className="list__snippet" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aliquam, dolores impedit velit exercitationem assumenda? Eaque, temporibus facilis nam asd</p>
                         </div>
                     </li>
                     <li className="list__item">
@@ -96,7 +95,7 @@ const SkeletonResults = () => {
                         </li>
                         <li className="list__item">
                             <p className="list__field">Lorem</p>
-                            <p className="list__value">Lorem ipsum dolor sit ametasdasdqweqweasdasdsaddasdas</p>
+                            <p className="list__value">Lorem ipsum dolor sit ametasdasdqweqweaeastereggdsaddasdas</p>
                         </li>
                         <li className="list__item">
                             <p className="list__field">Lorem</p>

@@ -1,6 +1,5 @@
 
 const InlineTweets = ({inlineTweets}) => {
-
     return (
         <div className="inline-tweets-container">
             <div className="inline-tweets__title-container">

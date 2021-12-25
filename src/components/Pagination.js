@@ -17,8 +17,8 @@ const Pagination = ({pagination}) => {
                         pagination.other_pages && Object.entries(pagination.other_pages).map((link) => {
                             id++
                             return (
-                                <li className="letter__o-item" key={id}>
-                                    <a className="letter__o-container" href={link}>
+                                <li className="letter__o-item" key={id} onClick={() => alert("Not avalaible yet")}>
+                                    <a className="letter__o-container">
                                         <p className="letter__o">o</p>
                                         <p className="letter__o-page-number">{id}</p>
                                     </a>

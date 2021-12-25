@@ -1,5 +1,4 @@
 const TopStories = ({topStories}) => {
-    
     return (
         <div className="top-histories-container">
             <div className="top-histories__title-container">

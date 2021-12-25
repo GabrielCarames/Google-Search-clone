@@ -1,44 +1,32 @@
-import { useContext, useEffect, useState } from "react"
-import { useHistory } from "react-router-dom";
+import { useContext, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import LoadingContext from "../contexts/LoadingContext"
+import { useHistory } from "react-router-dom";
 import axios from "axios"
+import LoadingContext from "../contexts/LoadingContext"
 
 export function useSearcherHelper () {
-
-    const [ country, setCountry] = useState(undefined)
-    const [ region, setRegion] = useState(undefined)
-    // const [ search, setSearch] = useState(null)
-
+    const searchFromReducer = useSelector(state => state.searchReducer)
+    const location = useSelector(state => state.locationReducer)
     const { setLoadingResults } = useContext(LoadingContext)
     const dispatch = useDispatch()
     let history = useHistory()
-    const search = useSelector(state => state.searchReducer)
-    console.log("search del reducer base", search)
+
     const handleChange = (e) => {
         dispatch({
             type: '@updateSearch',
             payload: {[e.target.name]: e.target.value}
         })
-        // setSearch({
-        //     ...search,
-        //     [e.target.name]: e.target.value
-        // })
     }
     
-    const searchSubmit = (manualSearch) => {
-        console.log("states", country, region, search)
-        let toSearch
-        if(manualSearch) toSearch = manualSearch
-        else toSearch = search.payload.search
+    const searchSubmit = () => {
+        localStorage.removeItem('results')
+        setLoadingResults(true)
         history.push("/results")
         const params = {
             api_key: "5F6850F10FB74BA198C5CECD43E031F3",
-            q: toSearch,
-            "location": `${region} Province,${country}`,
-        }
-        
-        setLoadingResults(true)
+            q: searchFromReducer,
+            "location": `${location.region} Province,${location.country}`,
+        } 
         axios.get('https://api.scaleserp.com/search', { params })
         .then(response => {
             console.log("search", response.data)
@@ -52,34 +40,11 @@ export function useSearcherHelper () {
         })
     }
 
-    const selectCountry = (country) => {
-        setCountry(country)
-    }
-
-    const getCountryValue = () => {
-        return country
-    }
-
-    const selectRegion = (region) => {
-        setRegion(region)
-    }
-
-    const getRegionValue = () => {
-        return region
-    }
-
     useEffect(() => {
         const listener = event => {
           if (event.code === "Enter" || event.code === "NumpadEnter") {
-            if (document.activeElement.classList[0] === 'navbar__input') {
-                event.preventDefault();
-                console.log("enter", document.activeElement.value, search)
-                // setSearch(document.activeElement.value)
-                // dispatch({
-                //     type: '@updateSearch',
-                //     payload: document.activeElement.value
-                // })
-                searchSubmit(document.activeElement.value)
+            if (document.activeElement.classList[0] === "navbar__input" || document.activeElement.classList[0] === "searcher__input") {
+                searchSubmit()
                 document.activeElement.value = ''
                 document.activeElement.defaultValue = ''
             }
@@ -89,11 +54,9 @@ export function useSearcherHelper () {
         return () => {
             document.removeEventListener("keydown", listener);
         };
-      }, []);
+      }, [searchFromReducer]);
 
-    return {
-        handleChange, searchSubmit, selectCountry, getCountryValue, selectRegion, getRegionValue
-    }
+    return {handleChange, searchSubmit}
 }
 
 export default useSearcherHelper

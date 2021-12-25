@@ -1,9 +1,11 @@
-import useSearcherHelper from "../hooks/useSearcherHelper"
+import { useDispatch, useSelector } from "react-redux";
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
+import useSearcherHelper from "../hooks/useSearcherHelper"
 
 const Searcher = () => {
-
-    const { handleChange, searchSubmit, selectCountry, getCountryValue, selectRegion, getRegionValue } = useSearcherHelper()
+    const { handleChange, searchSubmit} = useSearcherHelper()
+    const dispatch = useDispatch()
+    const location = useSelector(state => state.locationReducer)
 
     return (
         <main className="searcher-main">
@@ -22,20 +24,26 @@ const Searcher = () => {
                 <div className="searcher__country-picker">
                     <CountryDropdown
                         defaultOptionLabel={"Select Country"}
-                        value={getCountryValue()}
-                        onChange={(val) => selectCountry(val)}
+                        value={location.country}
+                        onChange={(val) => dispatch({
+                            type: '@updateCountry',
+                            payload: val
+                        })}
                         classes="searcher__country"
-                        />
-                        <RegionDropdown
-                            country={getCountryValue()}
-                            value={getRegionValue()}
-                            blankOptionLabel="Select Region"
-                            onChange={(val) => selectRegion(val)}
-                            classes="searcher__region"
-                            blacklist={{
-                                AR: ["Capital Federal"],
-                            }}
-                        />
+                    />
+                    <RegionDropdown
+                        country={location.country}
+                        value={location.region}
+                        blankOptionLabel="Select Region"
+                        onChange={(val) => dispatch({
+                            type: '@updateRegion',
+                            payload: val
+                        })}
+                        classes="searcher__region"
+                        blacklist={{
+                            AR: ["Capital Federal"],
+                        }}
+                    />
                 </div>
                 <div className="searcher__buttons-container">
                     <button className="searcher__search-button" onClick={() => {searchSubmit()}}>

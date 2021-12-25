@@ -1,6 +1,5 @@
 
 const RelatedSearches = ({relatedSearches}) => {
-
     const relatedSearchesGroup = relatedSearches.filter((search) => search.type === "group")
     const relatedSearchesStandard = relatedSearches.filter((search) => search.type === "standard")
 

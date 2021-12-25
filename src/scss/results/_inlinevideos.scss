@@ -32,7 +32,13 @@
                 .list__image-container {
                     width: 124px;
                     height: 70px;
-                    background-color: red;
+                    background-color: white;
+                    border-radius: 5px;
+                    .list__image {
+                        width: 124px;
+                        height: 70px;
+                        object-fit: cover;
+                    }
                 }
                 .list__description-container {
                     margin-left: 20px;

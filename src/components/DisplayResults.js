@@ -12,17 +12,15 @@ import LocalMap from "./LocalMap"
 import Ads from "./Ads"
 
 const DisplayResults = () => {
-
     const results = useSelector(state => state.resultsReducer).payload
     const { ads, organic_results, knowledge_graph, top_stories, related_questions, related_searches, pagination, inline_tweets, local_map, local_results, inline_videos } = results
-    localStorage.setItem('cosa', JSON.stringify(local_map))
 
     return (
         <div className="results-results-container">
             <div className="results__left-section">
                 {top_stories && <TopStories topStories={top_stories} />}
                 {related_questions && <RelatedQuestions relatedQuestions={related_questions} />}
-                <Ads ads={ads} />
+                {ads && <Ads ads={ads} />}
                 {local_map && local_map.image && <LocalMap localMap={local_map} />}
                 {local_results && <LocalResults localResults={local_results} />} 
                 {inline_tweets && <InlineTweets inlineTweets={inline_tweets} />}

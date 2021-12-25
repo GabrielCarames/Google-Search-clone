@@ -340,6 +340,7 @@ body .app {
           align-items: center;
   margin-left: 20px;
   cursor: pointer;
+  border-bottom: 3px solid #202124;
 }
 
 .results-main .results-container .results-navbar-container .results-navbar-results-sections .sections__list .list__item:nth-child(1) {
@@ -1152,7 +1153,7 @@ body .app {
 .top-histories-container {
   width: 670px;
   margin-left: 180px;
-  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .top-histories-container .top-histories__title-container {
@@ -1281,6 +1282,7 @@ body .app {
 .related-questions-container {
   margin-left: 180px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .related-questions-container .related-questions__title {
@@ -2117,7 +2119,15 @@ body .app {
 .inline-videos-container .inline-videos__list .list__item-container .list__item .list__image-container {
   width: 124px;
   height: 70px;
-  background-color: red;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.inline-videos-container .inline-videos__list .list__item-container .list__item .list__image-container .list__image {
+  width: 124px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .inline-videos-container .inline-videos__list .list__item-container .list__item .list__description-container {

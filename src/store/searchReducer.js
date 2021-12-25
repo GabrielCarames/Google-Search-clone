@@ -1,9 +1,13 @@
-const search = null
+let search = {
+    search: null
+}
 
 const searchReducer = (state = search, {type, payload}) => {
     switch (type) {
         case '@updateSearch':
-            return {...state, payload}
+            let searchCopy = Object.assign({}, search)
+            searchCopy.search = payload.search
+            return searchCopy
         default:
             return state
     }
